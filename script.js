@@ -50,9 +50,10 @@ function displayQuestions() {
     var questionText = document.getElementById("question-text");
     questionText.textContent = currentQ.q;
     trueFalseChoices.innerHTML = "";
-
-    // for ( var i = 0; i < qArray.length; i++){
-    currentQ.op.forEach(function (op, i) {
+    
+    //currentQ.op.forEach(function (op, i)
+    
+    for ( var i = 0; i < qArray.length; i++) {
         var opButtons = document.createElement("button");
         opButtons.setAttribute("class", "true-false-answers");
         opButtons.setAttribute("value", op);
@@ -60,7 +61,7 @@ function displayQuestions() {
         opButtons.onclick = checkTrueFalse;
         trueFalseChoices.appendChild(opButtons);
     
-    })
+    }
 }
 var checkTrueFalse = function() {
     if (this.value !== qArray[index].a){
