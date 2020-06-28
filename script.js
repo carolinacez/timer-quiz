@@ -1,12 +1,4 @@
-//this variable targets the button
-var startQuizEl = document.querySelector("#click-start");
-// this gives the button text
-startQuizEl.innerHTML = "Start!";
-//this section contains the questions and answers 
-var questionsSection = document.getElementById("section-one");
-index = 0;
-var trueFalseChoices = document.getElementById("true-false-answers");
-var verifyAnswer = document.getElementById("correct-choice");
+
 
 //This is my array of questions and answers 
 var qArray = [
@@ -34,6 +26,16 @@ var qArray = [
 
 ]
 
+//this variable targets the button
+var startQuizEl = document.querySelector("#click-start");
+// this gives the button text
+startQuizEl.innerHTML = "Start!";
+//this section contains the questions and answers 
+var questionsSection = document.getElementById("section-one");
+index = 0;
+var trueFalseChoices = document.getElementById("true-false-answers");
+var verifyAnswer = document.getElementById("correct-choice");
+
 
 
 
@@ -51,7 +53,7 @@ function displayQuestions() {
     questionText.textContent = currentQ.q;
     trueFalseChoices.innerHTML = "";
     
-    //currentQ.op.forEach(function (op, i)
+    
     
     for ( var i = 0; i < qArray.length; i++) {
         var opButtons = document.createElement("button");
@@ -79,3 +81,4 @@ startQuizEl.addEventListener("click", beginQuiz)
 //,{q:"Event Listener is a response to an event", a:"true"},
 //{q:"querySelector() doesn't help find a target element", a:"false"},
 //{q:"console.log() does not display the elements HTML", a:"false"}]
+//currentQ.op.forEach(function (op, i)
