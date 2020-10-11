@@ -9,7 +9,12 @@
 </head>
 
 <body>
-    <main id="mainOne">
+    
+    <div class="timer">
+        <span id="time">0</span>
+    </div>
+    
+    <!-- <main id="mainOne"> -->
         <div id="home-page" class="home-page">
             <div id="welcome-section">
                 <h1>Welcome to JavaScript Quiz! </h1>
@@ -17,22 +22,25 @@
                 <p>Good Luck!</p>
             </div>
 
-            <section class="start-quiz">
+            <!-- <section class="start-quiz"> -->
                 <button id="click-start"></button>
-            </section>
+            <!-- </section> -->
         </div>
 
 
-        <section class="section-one" id="section-one">
+        <section class="hide" id="questions">
             <h1 id="question-text"></h1>
-            <div id="true-false-answers"></div>
-            <div id="correct-choice"></div>
+            <div id="choices"></div>
+            <!-- <div id="correct-choice"></div> -->
 
-                
-
-            
         </section>
-    </main>
+    
+        <div class="hide" id="endscreen">
+            <h1>You finished the quiz!</h1>
+            <p>Your final score is <span id="finalScore"></span></p> 
+            <p>Enter Name: <input type="text" id="name"/><button id="submit"></button></p>
+        </div>
+    <!-- </main> -->
     <script src="script.js"></script>
 </body>
 
